@@ -1,6 +1,15 @@
 # k8s-base-repo
 
-# Test
+# Minikube
+```
+You can identify which port you want to expose
+
+minikube start --ports=30100:30100,30200:30200
+
+You can also delete
+
+minikube delete
+```
 
 # Encodeing secret
 ```
@@ -28,7 +37,7 @@ kubectl logs -f webapp-deployment-8d94f95d6-c5whs (stream)
 kubectl logs webapp-deployment-8d94f95d6-c5whs (not-stream)
 
 Find url of the node to access application
-1. kubectl get node -0 wide
+1. kubectl get node -o wide
 
 NAME       STATUS   ROLES           AGE    VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
 minikube   Ready    control-plane   146m   v1.26.1   192.168.58.2   <none>        Ubuntu 20.04.5 LTS   5.10.104-linuxkit   docker://20.10.23
