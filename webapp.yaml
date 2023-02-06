@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: cloudkats/hello-world-rest:latest
+        image: nanajanashia/k8s-demo-app:v1.0
         ports:
         - containerPort: 3000
         env:
@@ -29,7 +29,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: mongo-secret
-              key: mongo-user
+              key: mongo-password
         - name: "DB_URL"
           valueFrom:
             configMapKeyRef:
